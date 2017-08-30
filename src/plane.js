@@ -1,5 +1,5 @@
-var Plane = function () {};
+var Plane = function() {};
 
-Plane.prototype.isworking(function(){
+Plane.prototype.isworking = function(){
   return true
-});
+};

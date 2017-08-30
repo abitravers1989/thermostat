@@ -1,3 +1,5 @@
+// 'use strict';
+
 describe("Plane", function() {
   var plane1;
 
@@ -7,5 +9,8 @@ describe("Plane", function() {
 
 
   it("should return true if working", function() {
-    expect(plane1.isworking();).toBe(true);
+    plan = plane1.isworking();
+    expect(plan).toEqual(true);
   });
+
+});
