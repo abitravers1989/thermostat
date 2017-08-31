@@ -1,6 +1,6 @@
 'use strict';
 
-describe("Airport", function(){
+describe("Feature Test:", function(){
   var airport;
   var plane;
 
@@ -10,7 +10,7 @@ describe("Airport", function(){
   })
 
   it("instructs a plane to land at an airport and confirms it's landed", function(){
-    plane.land(airport)
-    expect(airport.planes).toContain(plane1);
-  })
+    plane.land(airport);
+    expect(airport.planes()).toContain(plane);
+  });
 });

@@ -1,17 +1,18 @@
 //supreme function / variable
+'use strict';
 
-var Airport = function(planes){
-  this.planesz = planes;
+function Airport(){}
+
+Airport.prototype.planes = function() {return [];};
+
+Airport.prototype.clearForLanding = function(plane) {
 };
 
-Airport.prototype.planesarray = function(){
-  planes = new Array(this.planesz);
+
+function Airport(){
+  this._hangar = [];
+}
+Airport.prototype.planes = function(){ return this._hangar; };
+Airport.prototype.clearForLanding = function(plane){
+  this._hangar.push(plane);
 };
-
-//TypeError: air is not a function
-air = new Airport
-air("planes")
-
-air = new airport
-air("planes")
-//TypeError: air is not a function
