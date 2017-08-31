@@ -1,14 +1,26 @@
 'use strict';
 
 var Thermostat = function(){
-  Thermostat.prototype.starttemp = 20;
+  this.temp = 20;
 }
-// function Thermostat(){}
-//
-// Thermostat.prototype.starttemp = function (){
-//   return 20
-// };
-//
-// Thermostat.prototype.starttemp = function (){
-//   return 20
-// };
+
+Thermostat.prototype.getCurrentTemperature = function(){
+  return this.temp;
+};
+
+Thermostat.prototype.up = function(i) {
+   console.log(this.temp += i);
+};
+
+Thermostat.prototype.down = function(i) {
+  if(this.temp < 10 ) {
+    throw ("Too cold");
+  }else {
+    this.temp -= i
+  }
+};
+
+
+ther = new Thermostat
+ther.down(25);
+ther.temp

@@ -7,6 +7,16 @@ describe("Thermostat", function(){
   });
 
   it("has a starting temperature of 20 degrees", function(){
-    expect(thermostat.starttemp).toEqual(20);
+    expect(thermostat.temp).toEqual(20);
+  });
+
+  it("increases the temperture with the up method", function(){
+    thermostat.up(10);
+    expect(thermostat.temp).toEqual(30);
+  });
+
+  it("increases the temperture with the down method", function(){
+    thermostat.down(10);
+    expect(thermostat.temp).toEqual(10);
   });
 });
