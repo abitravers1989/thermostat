@@ -14,9 +14,9 @@ Thermostat.prototype.up = function(i) {
 
 Thermostat.prototype.down = function(i) {
   if(this.temp < 10 ) {
-    throw ("Too cold");
+    throw("Too cold");
   }else {
-    this.temp -= i
+    (this.temp -= i);
   }
 };
 
