@@ -20,6 +20,14 @@ Thermostat.prototype.down = function(i) {
   }
 };
 
+Thermostat.prototype.powersave = function() {
+  if(this.temp > 25 ) {
+    throw("Too cold");
+  }
+};
+
+
+
 
 ther = new Thermostat
 ther.down(25);
