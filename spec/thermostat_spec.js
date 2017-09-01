@@ -27,6 +27,7 @@ describe("Thermostat", function(){
 
   it("when power saving mode is on the max temp is 25 degrees", function(){
     thermostat.powersave();
-    thermostat.temp  
+    thermostat.up(40);
+    expect(thermostat.temp).toThrow("Maximum temp exceeded");
   });
 });
