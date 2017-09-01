@@ -44,7 +44,7 @@ describe("Thermostat", function(){
     thermostat.temp = 30
     expect(function(){
       thermostat.up(5);
-    }).toThrowError("Fucking turn it down!");
+    }).toThrowError("TURN it down!");
   });
 
   it("Resets the temperature to 20 with reset button", function(){
