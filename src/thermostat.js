@@ -2,6 +2,7 @@
 
 var Thermostat = function(){
   this.temp = 20;
+  this.powersaving = true
 }
 
 Thermostat.prototype.getCurrentTemperature = function(){
@@ -9,20 +10,26 @@ Thermostat.prototype.getCurrentTemperature = function(){
 };
 
 Thermostat.prototype.up = function(i) {
-   console.log(this.temp += i);
+  if(this.temp > 25 ) {
+    throw new Error("Too Hot");
+  }else {
+    (this.temp += i);
+  }
 };
 
 Thermostat.prototype.down = function(i) {
   if(this.temp < 10 ) {
-    throw("Too cold");
+    throw new Error("Too cold");
   }else {
     (this.temp -= i);
   }
 };
 
-Thermostat.prototype.powersave = function() {
-  if(this.temp > 25 ) {
-    throw("Too cold");
+Thermostat.prototype.powersavingButton = function() {
+  if(this.powersaving === true){
+    this.powersaving = false
+  } else {
+    this.powersaving = true 
   }
 };
 

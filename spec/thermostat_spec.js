@@ -22,12 +22,22 @@ describe("Thermostat", function(){
 
   it("throws an error message if min temperature is reached", function(){
     thermostat.down(30);
-    expect(thermostat.temp).toThrow("Too cold");
+    expect(function(){
+      thermostat.down(30);
+    }).toThrowError("Too cold");
   });
 
-  it("when power saving mode is on the max temp is 25 degrees", function(){
-    thermostat.powersave();
-    thermostat.up(40);
-    expect(thermostat.temp).toThrow("Maximum temp exceeded");
+  it("max temp is 25 degrees", function(){
+    thermostat.up(30);
+    expect(function(){
+      thermostat.up(5);
+    }).toThrowError("Too Hot");
   });
+
+  it("turns power mode on and off", function(){
+    expect(thermostat.powersaving).toEqual(true)
+    thermostat.powersavingButton();
+    expect(thermostat.powersaving).toEqual(false)
+  })
+
 });
