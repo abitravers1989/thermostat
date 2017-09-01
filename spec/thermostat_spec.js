@@ -40,4 +40,10 @@ describe("Thermostat", function(){
     expect(thermostat.powersaving).toEqual(false)
   })
 
+  it("max temp is 32 degrees when powersavingbutton is off", function(){
+    expect(thermostat.powersaving).toEqual(true)
+    thermostat.powersavingButton();
+    expect(thermostat.powersaving).toEqual(false)
+  })
+
 });
