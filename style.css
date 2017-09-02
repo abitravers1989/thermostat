@@ -49,6 +49,18 @@ h1 {
 	border:0;
 }
 
+.low-usage {
+  color: lightblue;
+}
+
+.medium-usage {
+  color: green;
+}
+
+.high-usage {
+  color: red;
+}
+
 
 /*input[type=button id="powersaving-off"] {
   display: inline-block;
