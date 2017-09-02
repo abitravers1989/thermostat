@@ -50,8 +50,3 @@ Thermostat.prototype.usage = function() {
     return "high-usage"
   }
 };
-
-
-ther = new Thermostat
-ther.down(25);
-ther.temp
