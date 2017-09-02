@@ -1,5 +1,19 @@
+.low-usage {
+  color: lightblue;
+}
+
+.medium-usage {
+  color: green;
+}
+
+.high-usage {
+  color: red;
+}
+
+
+
 body {
-	color:#666;
+	color:#999;
 	background-color:#fff;
 	font-family:'Open Sans',Arial,Helvetica,sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -49,17 +63,6 @@ h1 {
 	border:0;
 }
 
-.low-usage {
-  color: lightblue;
-}
-
-.medium-usage {
-  color: green;
-}
-
-.high-usage {
-  color: red;
-}
 
 
 /*input[type=button id="powersaving-off"] {
