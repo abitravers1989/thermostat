@@ -1,6 +1,6 @@
 $( document ).ready(function(){
-
-  $('#temperature').text ('HOW hot? ARE YOU CRAZY FOOL??!!');
+  var thermostat = new Thermostat();
+  $('#temperature').text (thermostat.temp +'oC!! ' + 'ARE YOU CRAZY FOOL??!!');
 
   $( "input" ).click(function( event ) {
     alert("Welcome to the world of heat");
